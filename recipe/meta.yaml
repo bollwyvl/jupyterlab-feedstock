@@ -30,12 +30,13 @@ requirements:
     - subprocess32   # [py2k]
 test:
   requires:
-    - nodejs
+    - nodejs >=8,<9
   imports:
     - jupyterlab
   commands:
     - jupyter lab --version
     - jlpm --version
+    - jlpm versions
     - jupyter labextension list
     - jupyter lab path
     - jupyter lab build
